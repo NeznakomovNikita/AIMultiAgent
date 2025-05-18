@@ -49,6 +49,13 @@ jobs:
         fi
         npx eslint . --ext .js,.jsx,.ts,.tsx --fix --quiet
 
+    - name: Lint Styles with Tailwind CSS Plugin (using ESLint)
+      run: |
+        # Эта команда будет использовать тот же ESLint, но теперь с активированным плагином Tailwind CSS
+        # Если ESLint настроен правильно с eslint-plugin-tailwindcss, он будет проверять классы Tailwind.
+        # Проблемы с подхватыванием конфига eslint.config.js вместо старых .eslintrc.* должен решать SF-DevOps.
+        npx eslint . --ext .js,.jsx,.ts,.tsx --fix --quiet
+
     - name: Build project
       run: npm run build --if-present
 
