@@ -1,0 +1,169 @@
+# roocode_rules.yaml
+
+SF_UI_Designer:
+  description: >
+    Guidelines and best practices for the SF_UI_Designer agent to produce
+    high-fidelity mockups, style definitions, and graphic assets
+    for the "Step Flow" project, adhering to the defined neumorphic aesthetic.
+  rules:
+    foundational_ui:
+      - name: Clarity & Simplicity
+        instruction: >
+          Present only the essential UI elements. Avoid clutter and keep layouts
+          intuitive so that visual feedback supports voice interactions.
+      - name: Feedback & Communication
+        instruction: >
+          Design clear visual cues for bot status, step progression, and errors.
+          Use badges, progress indicators, and toast messages sparingly.
+      - name: Consistency & Predictability
+        instruction: >
+          Reuse typography, color styles, and component patterns across all screens
+          to reinforce learnability.
+      - name: Accessibility
+        instruction: >
+          Follow WCAG guidelines: ensure sufficient contrast, large tappable targets,
+          and ARIA labels for screen readers.
+      - name: Error Handling
+        instruction: >
+          Design fallback visuals for failures: error modals, retry buttons,
+          and contextual help overlays.
+
+    theme_and_style:
+      dark_design:
+        - name: Backgrounds
+          value: "#121212"
+          note: Avoid pure black containers; use very dark gray (#1E1E1E).
+        - name: Text & Icons
+          contrast_ratio: "≥4.5:1"
+        - name: Accent Colors
+          palette: ["#BB86FC", "#03DAC6"]
+        - name: Overlays & Modals
+          style: "8px radius, 50% opacity blur"
+      soft_ui:
+        - name: Shadows
+          style: "dual: +5px light, −5px dark, 10–15% opacity"
+        - name: Highlights
+          style: "subtle gradients on key callouts"
+        - name: Light Source
+          direction: "top-left"
+      motion_ux:
+        - name: Micro-interactions
+          timing: "<200ms"
+          easing: "ease-in-out"
+        - name: Transitions
+          sequence: ["fade", "slide", "settle"]
+          timing: "200–500ms"
+        - name: Performance
+          fps: 60
+          fallback: "reduce or disable on low-power"
+
+    trending_features:
+      - name: Neumorphism
+        caution: "Watch low-contrast issues; use only on primary controls"
+      - name: Glassmorphism
+        style: "frosted glass panels with > 70% contrast over backdrop"
+      - name: Adaptive Layouts
+        instruction: "Design flexible grids that reflow for dark/light and large/small screens"
+      - name: Personalization
+        instruction: "Allow theme toggles and adjustable font scales"
+
+    voxel_art:
+      - name: Purposeful Use
+        instruction: "Limit to icons or key illustrations"
+      - name: Grid & Perspective
+        setting: "isometric 30°/45°"
+      - name: Palette
+        max_colors: 16
+      - name: Optimization
+        max_size_kb: 100
+      - name: Accessibility
+        fallback: "provide alt text or simplified SVG"
+
+    image_generation_prompts:
+      - target: Workflow Hero Illustration
+        prompt: >
+          3D voxel-art depiction of a voice assistant workflow,
+          isometric view, dark themed dashboard background,
+          high detail, minimal palette
+      - target: Micro-interaction Icon Set
+        prompt: >
+          Set of 5 micro-interaction icons with smooth easing paths,
+          transparent PNG on dark background, subtle soft shadows
+
+SF_Developer_Frontend: # Applies to both SF_Developer (Frontend - Web) and SF_Developer (Frontend - PWA/Mobile)
+  description: >
+    Implementation rules for the SF_Developer (Frontend - Web) and SF_Developer (Frontend - PWA/Mobile)
+    agents to generate production-ready code (React, React Native, TypeScript)
+    matching the SF_UI_Designer’s specifications.
+  rules:
+    project_structure:
+      - src/
+      - components/
+      - styles/
+      - assets/voxel/
+      - workflows/stepflow/
+    technologies:
+      - React (with shadcn/ui)
+      - Tailwind CSS
+      - Framer Motion
+      - recharts (for stats panels)
+    coding_standards:
+      - indent: 2 spaces
+      - max_line_length: 100
+      - filenames: kebab-case
+      - exports: named exports preferred
+    theming:
+      - dark_mode:
+          background: "theme('colors.gray.900')"
+          text: "theme('colors.gray.100')"
+          accent: ["theme('colors.purple.400')", "theme('colors.teal.400')"]
+      - soft_ui:
+          box_shadow_light: "0 5px 10px rgba(255,255,255,0.1)"
+          box_shadow_dark: "0 -5px 10px rgba(0,0,0,0.15)"
+    components:
+      - Button:
+          style:
+            - padding: "px-4 py-2"
+            - border_radius: "rounded-2xl"
+            - shadow: "soft_ui"
+          variants:
+            - primary
+            - secondary
+      - Modal:
+          style:
+            - backdrop_blur: "backdrop-blur-md"
+            - overlay_opacity: 50%
+      - ProgressStepper:
+          props:
+            - currentStep
+            - totalSteps
+          animation: "frame-motion sequence fade-slide"
+    animations:
+      - microInteraction:
+          library: framer-motion
+          default:
+            initial: { opacity: 0.8, scale: 0.95 }
+            animate: { opacity: 1, scale: 1 }
+            transition: { duration: 0.15, ease: "easeInOut" }
+      - stepTransition:
+          library: framer-motion
+          default:
+            initial: { x: 50, opacity: 0 }
+            animate: { x: 0, opacity: 1 }
+            transition: { duration: 0.3, ease: "easeInOut" }
+
+    voxel_asset_pipeline:
+      - task: Generate via Gemini 2
+        prompts_source: "../SF_UI_Designer/image_generation_prompts"
+      - task: Optimize to PNG/SVG
+        tool: "svgo / optipng"
+      - task: Import into assets/voxel/
+      - task: Lazy-load with dynamic import()
+
+    accessibility:
+      - aria:
+          require: ["aria-label", "role"]
+      - keyboard:
+          focus_outline: "outline-2 outline-offset-2"
+      - contrast:
+          enforce: "4.5:1 for text, 3:1 for UI elements"
