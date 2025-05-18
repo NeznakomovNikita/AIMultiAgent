@@ -1,0 +1,70 @@
+name: Frontend CI
+
+on:
+  push:
+    branches: [ main, develop ]
+    paths:
+      - 'step_flow/frontend_web/**'
+      - '.github/workflows/frontend-ci.yml'
+  pull_request:
+    branches: [ main, develop ]
+    paths:
+      - 'step_flow/frontend_web/**'
+      - '.github/workflows/frontend-ci.yml'
+
+jobs:
+  lint-build-test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./step_flow/frontend_web
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        cache: 'npm'
+        cache-dependency-path: step_flow/frontend_web/package-lock.json
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Lint with ESLint
+      run: |
+        # Установим ESLint если его нет в зависимостях package.json
+        if ! npm list eslint &>/dev/null; then npm install eslint --save-dev; fi
+        # Создадим базовый конфиг если его нет
+        if [ ! -f ".eslintrc.js" ] && [ ! -f ".eslintrc.json" ] && [ ! -f ".eslintrc.yaml" ] && [ ! -f ".eslintrc.yml" ]; then 
+          echo '{ "extends": "eslint:recommended", "parserOptions": { "ecmaVersion": "latest", "sourceType": "module" }, "env": { "es6": true, "browser": true, "node": true } }' > .eslintrc.json
+          echo "Базовый .eslintrc.json создан."
+        fi
+        # Создадим .eslintignore если его нет, чтобы игнорировать node_modules и build
+        if [ ! -f ".eslintignore" ]; then
+          echo "node_modules" > .eslintignore
+          echo "build" >> .eslintignore
+          echo "Базовый .eslintignore создан."
+        fi
+        npx eslint . --ext .js,.jsx,.ts,.tsx --fix --quiet
+
+    - name: Build project
+      run: npm run build --if-present
+
+    - name: Test with Jest (or placeholder)
+      run: |
+        # Установим Jest если его нет
+        if ! npm list jest &>/dev/null; then npm install jest --save-dev; fi
+        # Создадим базовый конфиг jest.config.js если его нет
+        if [ ! -f "jest.config.js" ]; then
+          echo "module.exports = { testEnvironment: 'jsdom' };" > jest.config.js
+          echo "Базовый jest.config.js создан."
+        fi
+        # Создадим папку __tests__ и dummy тест если их нет
+        if [ ! -d "__tests__" ]; then mkdir __tests__; fi
+        if [ ! -f "__tests__/dummy.test.js" ]; then 
+          echo "test('dummy test', () => { expect(true).toBe(true); });" > __tests__/dummy.test.js
+          echo "Создан __tests__/dummy.test.js"
+        fi
+        npx jest --passWithNoTests

@@ -1,0 +1,28 @@
+{
+  "name": "mcp-atlassian",
+  "version": "0.1.0",
+  "description": "A Model Context Protocol server",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "mcp-atlassian": "./build/index.js"
+  },
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\" && cp src/jira_helper.py build/jira_helper.py",
+    "prepare": "npm run build",
+    "watch": "tsc --watch",
+    "inspector": "npx @modelcontextprotocol/inspector build/index.js"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/sdk": "^1.11.4",
+    "@types/jira-client": "^7.1.9",
+    "@types/node": "^20.17.47",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "jira-client": "^8.2.2"
+  }
+}

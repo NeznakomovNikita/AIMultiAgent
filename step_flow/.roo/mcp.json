@@ -1,0 +1,22 @@
+{
+  "modes": [
+    "sf_orchestrator.json",
+    "sf_project_manager.json",
+    "sf_architect.json",
+    "sf_lead_developer.json",
+    "sf_developer_frontend_web.json",
+    "sf_developer_frontend_pwa_mobile.json",
+    "sf_developer_backend.json",
+    "sf_ui_designer.json",
+    "sf_qa.json",
+    "sf_devops.json",
+    "sf_data_scientist.json",
+    "sf_content_manager.json",
+    "sf_doc_writer.json",
+    "sf_voice_interaction_manager.json",
+    "sf_workflow_builder_agent.json",
+    "sf_task_manager.json",
+    "sf_pipeline_admin.json"
+  ],
+  "servers": []
+}
