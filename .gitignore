@@ -97,5 +97,3 @@ docker-compose.override.yml
 # Разное
 *.sublime-project
 *.sublime-workspace
-# MCP файлы с секретами
-.roo/mcp.json
