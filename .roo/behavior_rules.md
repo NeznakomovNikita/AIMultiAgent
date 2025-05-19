@@ -226,13 +226,13 @@
 -   **Настроить CI/CD пайплайн для фронтенда (GitHub Actions)**: Создать workflow в GitHub Actions для фронтенда (React/TypeScript), включающий линтинг, сборку и запуск тестов.
 
 **SCRUM-20: Задача 9: Настроить конфигурации для основных ИИ-агентов MVP**
--   **Создать и заполнить файл конфигурации sf_architect.json**: Создать JSON-файл конфигурации step_flow/.roo/modes/sf_architect.json и заполнить поля slug, name, model, role, custom_instructions согласно описанию роли в step_flow_project_plan.md#4.2.
--   **Создать и заполнить файл конфигурации sf_project_manager.json**: Создать JSON-файл конфигурации step_flow/.roo/modes/sf_project_manager.json и заполнить поля slug, name, model, role, custom_instructions согласно описанию роли в step_flow_project_plan.md#4.2.
--   **Создать и заполнить файл конфигурации sf_orchestrator.json**: Создать JSON-файл конфигурации step_flow/.roo/modes/sf_orchestrator.json и заполнить поля slug, name, model, role, custom_instructions согласно описанию роли в step_flow_project_plan.md#4.2.
--   **Создать и заполнить файл конфигурации sf_developer_backend.json**: Создать JSON-файл конфигурации step_flow/.roo/modes/sf_developer_backend.json и заполнить поля slug, name, model, role, custom_instructions согласно описанию роли в step_flow_project_plan.md#4.2.
--   **Создать и заполнить файл конфигурации sf_developer_frontend_web.json**: Создать JSON-файл конфигурации step_flow/.roo/modes/sf_developer_frontend_web.json и заполнить поля slug, name, model, role, custom_instructions согласно описанию роли в step_flow_project_plan.md#4.2.
--   **Создать и заполнить файл конфигурации sf_qa.json**: Создать JSON-файл конфигурации step_flow/.roo/modes/sf_qa.json и заполнить поля slug, name, model, role, custom_instructions согласно описанию роли в step_flow_project_plan.md#4.2.
--   **Создать и заполнить файл конфигурации sf_devops.json**: Создать JSON-файл конфигурации step_flow/.roo/modes/sf_devops.json и заполнить поля slug, name, model, role, custom_instructions согласно описанию роли в step_flow_project_plan.md#4.2.
+-   **Создать и заполнить файл конфигурации SF-architect.json**: Создать JSON-файл конфигурации step_flow/.roo/modes/SF-architect.json и заполнить поля slug, name, model, role, custom_instructions согласно описанию роли в step_flow_project_plan.md#4.2.
+-   **Создать и заполнить файл конфигурации SF-project_manager.json**: Создать JSON-файл конфигурации step_flow/.roo/modes/SF-project_manager.json и заполнить поля slug, name, model, role, custom_instructions согласно описанию роли в step_flow_project_plan.md#4.2.
+-   **Создать и заполнить файл конфигурации SF-orchestrator.json**: Создать JSON-файл конфигурации step_flow/.roo/modes/SF-orchestrator.json и заполнить поля slug, name, model, role, custom_instructions согласно описанию роли в step_flow_project_plan.md#4.2.
+-   **Создать и заполнить файл конфигурации SF-developer_backend.json**: Создать JSON-файл конфигурации step_flow/.roo/modes/SF-developer_backend.json и заполнить поля slug, name, model, role, custom_instructions согласно описанию роли в step_flow_project_plan.md#4.2.
+-   **Создать и заполнить файл конфигурации SF-developer_frontend_web.json**: Создать JSON-файл конфигурации step_flow/.roo/modes/SF-developer_frontend_web.json и заполнить поля slug, name, model, role, custom_instructions согласно описанию роли в step_flow_project_plan.md#4.2.
+-   **Создать и заполнить файл конфигурации SF-qa.json**: Создать JSON-файл конфигурации step_flow/.roo/modes/SF-qa.json и заполнить поля slug, name, model, role, custom_instructions согласно описанию роли в step_flow_project_plan.md#4.2.
+-   **Создать и заполнить файл конфигурации SF-devops.json**: Создать JSON-файл конфигурации step_flow/.roo/modes/SF-devops.json и заполнить поля slug, name, model, role, custom_instructions согласно описанию роли в step_flow_project_plan.md#4.2.
 
 ### Роль: ProjectManager
 

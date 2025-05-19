@@ -30,13 +30,13 @@
     *   Определяются зависимости между задачами.
     *   `Architect` предлагает высокоуровневое техническое решение, проектирует архитектуру, API, модели данных.
     *   **Подзадачи Architect (Примеры из SCRUM-20, SCRUM-12, SCRUM-11, SCRUM-10, SCRUM-8, SCRUM-5, SCRUM-3, SCRUM-2):**
-        *   `SCRUM-20`: Создать и заполнить файл конфигурации sf_architect.json.
-        *   `SCRUM-20`: Создать и заполнить файл конфигурации sf_project_manager.json.
-        *   `SCRUM-20`: Создать и заполнить файл конфигурации sf_orchestrator.json.
-        *   `SCRUM-20`: Создать и заполнить файл конфигурации sf_developer_backend.json.
-        *   `SCRUM-20`: Создать и заполнить файл конфигурации sf_developer_frontend_web.json.
-        *   `SCRUM-20`: Создать и заполнить файл конфигурации sf_qa.json.
-        *   `SCRUM-20`: Создать и заполнить файл конфигурации sf_devops.json.
+        *   `SCRUM-20`: Создать и заполнить файл конфигурации SF-architect.json.
+        *   `SCRUM-20`: Создать и заполнить файл конфигурации SF-project_manager.json.
+        *   `SCRUM-20`: Создать и заполнить файл конфигурации SF-orchestrator.json.
+        *   `SCRUM-20`: Создать и заполнить файл конфигурации SF-developer_backend.json.
+        *   `SCRUM-20`: Создать и заполнить файл конфигурации SF-developer_frontend_web.json.
+        *   `SCRUM-20`: Создать и заполнить файл конфигурации SF-qa.json.
+        *   `SCRUM-20`: Создать и заполнить файл конфигурации SF-devops.json.
         *   `SCRUM-12`: Инициализировать Git-репозиторий и структурировать проект.
         *   `SCRUM-12`: Настроить CI/CD пайплайн для бэкенда (GitHub Actions).
         *   `SCRUM-12`: Настроить CI/CD пайплайн для фронтенда (GitHub Actions).

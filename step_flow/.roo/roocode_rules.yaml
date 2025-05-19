@@ -1,8 +1,8 @@
 # roocode_rules.yaml
 
-SF_UI_Designer:
+SF-UI_Designer:
   description: >
-    Guidelines and best practices for the SF_UI_Designer agent to produce
+    Guidelines and best practices for the SF-UI_Designer agent to produce
     high-fidelity mockups, style definitions, and graphic assets
     for the "Step Flow" project, adhering to the defined neumorphic aesthetic.
   rules:
@@ -90,11 +90,11 @@ SF_UI_Designer:
           Set of 5 micro-interaction icons with smooth easing paths,
           transparent PNG on dark background, subtle soft shadows
 
-SF_Developer_Frontend: # Applies to both SF_Developer (Frontend - Web) and SF_Developer (Frontend - PWA/Mobile)
+SF-Developer_Frontend: # Applies to both SF-Developer (Frontend - Web) and SF-Developer (Frontend - PWA/Mobile)
   description: >
-    Implementation rules for the SF_Developer (Frontend - Web) and SF_Developer (Frontend - PWA/Mobile)
+    Implementation rules for the SF-Developer (Frontend - Web) and SF-Developer (Frontend - PWA/Mobile)
     agents to generate production-ready code (React, React Native, TypeScript)
-    matching the SF_UI_Designer’s specifications.
+    matching the SF-UI_Designer’s specifications.
   rules:
     project_structure:
       - src/
@@ -154,7 +154,7 @@ SF_Developer_Frontend: # Applies to both SF_Developer (Frontend - Web) and SF_De
 
     voxel_asset_pipeline:
       - task: Generate via Gemini 2
-        prompts_source: "../SF_UI_Designer/image_generation_prompts"
+        prompts_source: "../SF-UI_Designer/image_generation_prompts"
       - task: Optimize to PNG/SVG
         tool: "svgo / optipng"
       - task: Import into assets/voxel/

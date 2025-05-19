@@ -3,7 +3,7 @@
 ## Introduction
 Clear role definition for AI agents is necessary for effective collaboration, preventing duplication of effort, and ensuring coverage of all aspects of the development process. Each role has specific responsibilities and expertise.
 
-**Note:** This document describes general (global) roles. For large or specific projects (e.g., "Step Flow"), these roles may be adapted, and additional, project-specific roles may be introduced (e.g., with the `SF_` prefix). A detailed description of such roles and their interactions should be sought in the corresponding project documentation (see [`step_flow_project_plan.md`](step_flow_project_plan.md) or its English version).
+**Note:** This document describes general (global) roles. For large or specific projects (e.g., "Step Flow"), these roles may be adapted, and additional, project-specific roles may be introduced (e.g., with the `SF-` prefix). A detailed description of such roles and their interactions should be sought in the corresponding project documentation (see [`step_flow_project_plan.md`](step_flow_project_plan.md) or its English version).
 
 ## Overview of AI Agent Roles
 

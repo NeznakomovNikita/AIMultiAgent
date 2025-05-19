@@ -7,9 +7,9 @@ This document contains specific development guidelines for the "Step Flow" proje
 *   Adhere to the proposed directory structure (see section 6 of the project plan).
 *   Use the proposed technology stack (see section 2 of the project plan).
 *   **Teamwork and Scrum**:
-    *   Actively participate in all Scrum ceremonies facilitated by `SF_ScrumMaster`.
-    *   All tasks must be created and tracked in Jira (via `SF_TaskManager`).
-    *   If impediments arise, immediately inform `SF_ScrumMaster` and `SF_LeadDeveloper`.
+    *   Actively participate in all Scrum ceremonies facilitated by `SF-ScrumMaster`.
+    *   All tasks must be created and tracked in Jira (via `SF-TaskManager`).
+    *   If impediments arise, immediately inform `SF-ScrumMaster` and `SF-LeadDeveloper`.
     *   Adhere to the Definition of Done (DoD) agreed upon by the team.
 
 ## Guidelines for React Native (PWA/Mobile - [`../frontend_pwa/`](../frontend_pwa/))
@@ -51,8 +51,8 @@ This document contains specific development guidelines for the "Step Flow" proje
 *   Complex logic should be commented.
 
 ## Interaction with Other Agents
-*   Strictly follow instructions from `SF_Architect` and `SF_LeadDeveloper`.
-*   Promptly respond to requests from `SF_QA` and fix identified bugs.
+*   Strictly follow instructions from `SF-Architect` and `SF-LeadDeveloper`.
+*   Promptly respond to requests from `SF-QA` and fix identified bugs.
 *   If API changes are necessary, coordinate them with frontend developers and other API consumers.
-*   For specific information or research, contact `SF_Research`.
+*   For specific information or research, contact `SF-Research`.
 *   All communications should be constructive and aimed at achieving common sprint and project goals.

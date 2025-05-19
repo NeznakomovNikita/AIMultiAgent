@@ -4,11 +4,9 @@ FROM python:3.9-slim
 # Устанавливаем рабочую директорию
 WORKDIR /app
 
-# Копируем файлы зависимостей
+# Копируем файлы зависимостей и устанавливаем их
 COPY ./requirements.txt /app/requirements.txt
-
-# Устанавливаем зависимости
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir --upgrade -r /app/requirements.txt
 
 # Копируем исходный код приложения
 COPY . /app

@@ -32,13 +32,13 @@ The general development pipeline describes the sequence of stages a task goes th
     *   Dependencies between tasks are identified.
     *   `Architect` proposes a high-level technical solution, designs the architecture, API, data models.
     *   **Architect Subtasks (Examples from SCRUM-20, SCRUM-12, SCRUM-11, SCRUM-10, SCRUM-8, SCRUM-5, SCRUM-3, SCRUM-2):**
-        *   `SCRUM-20`: Create and populate sf_architect.json configuration file.
-        *   `SCRUM-20`: Create and populate sf_project_manager.json configuration file.
-        *   `SCRUM-20`: Create and populate sf_orchestrator.json configuration file.
-        *   `SCRUM-20`: Create and populate sf_developer_backend.json configuration file.
-        *   `SCRUM-20`: Create and populate sf_developer_frontend_web.json configuration file.
-        *   `SCRUM-20`: Create and populate sf_qa.json configuration file.
-        *   `SCRUM-20`: Create and populate sf_devops.json configuration file.
+        *   `SCRUM-20`: Create and populate SF-architect.json configuration file.
+        *   `SCRUM-20`: Create and populate SF-project_manager.json configuration file.
+        *   `SCRUM-20`: Create and populate SF-orchestrator.json configuration file.
+        *   `SCRUM-20`: Create and populate SF-developer_backend.json configuration file.
+        *   `SCRUM-20`: Create and populate SF-developer_frontend_web.json configuration file.
+        *   `SCRUM-20`: Create and populate SF-qa.json configuration file.
+        *   `SCRUM-20`: Create and populate SF-devops.json configuration file.
         *   `SCRUM-12`: Initialize Git repository and structure the project.
         *   `SCRUM-12`: Set up CI/CD pipeline for backend (GitHub Actions).
         *   `SCRUM-12`: Set up CI/CD pipeline for frontend (GitHub Actions).

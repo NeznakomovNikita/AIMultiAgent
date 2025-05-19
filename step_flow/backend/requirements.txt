@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+# Добавьте сюда другие зависимости по мере необходимости
+# Например:
+# sqlalchemy
+# pydantic
+# psycopg2-binary
+flake8
+pytest
