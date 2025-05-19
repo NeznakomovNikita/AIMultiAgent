@@ -1,0 +1,35 @@
+.preloaderContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #222; /* Темно-серый фон, заебись */
+  z-index: 9999; /* Поверх всего говна */
+  font-family: 'Arial', sans-serif; /* Шрифтец попроще, нахуй изыски */
+  color: #f0f0f0; /* Светло-серый текст */
+}
+
+.spinner {
+  border: 8px solid #555; /* Темно-серый фон для крутилки */
+  border-top: 8px solid #f0f0f0; /* Светло-серый для активной части крутилки */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite; /* Анимация вращения, сука */
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.preloaderContainer p {
+  font-size: 1.2em;
+  font-weight: bold;
+}
